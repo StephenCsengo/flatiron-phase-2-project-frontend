@@ -14,7 +14,6 @@ function CompletePage() {
 
   return (
     <Container>
-      <Navbar />
       <HikeList hikes={hikes} />
     </Container>
   );

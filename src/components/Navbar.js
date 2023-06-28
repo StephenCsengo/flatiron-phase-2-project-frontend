@@ -1,12 +1,15 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 function Navbar() {
   return (
-    <ul>
-      <li>Home</li>
-      <li>Your Completed Hikes</li>
-      <li>Complete A Hike</li>
-    </ul>
+    <div>
+      <NavLink to="/" exact>
+        Home
+      </NavLink>
+      <NavLink to="/completed">Your Completed Hikes</NavLink>
+      <NavLink to="/completeform">Complete A Hike</NavLink>
+    </div>
   );
 }
 
