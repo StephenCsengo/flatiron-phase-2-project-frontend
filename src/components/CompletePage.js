@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import HikeList from "./HikeList";
-import Navbar from "./Navbar";
 import Container from "@mui/material/Container";
 
 function CompletePage() {

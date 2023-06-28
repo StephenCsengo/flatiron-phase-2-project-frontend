@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import HikeList from "./HikeList";
-import HikeDetails from "./HikeDetails";
 import Container from "@mui/material/Container";
 
 function HikePage() {
