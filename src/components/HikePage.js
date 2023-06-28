@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import HikeList from "./HikeList";
+import HikeDetails from "./HikeDetails";
 import Container from "@mui/material/Container";
 
 function HikePage() {
@@ -14,6 +15,7 @@ function HikePage() {
   return (
     <Container>
       <HikeList hikes={hikes} />
+      <HikeDetails hike={hikes[1]} />
     </Container>
   );
 }
