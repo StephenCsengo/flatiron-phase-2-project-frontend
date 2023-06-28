@@ -1,9 +1,10 @@
 import React from "react";
+import Grid from "@mui/material/Grid";
 
 function Card(hike) {
   console.log(hike.hike);
   return (
-    <div>
+    <Grid item md={4}>
       <img src="https://placehold.co/300x200.png" alt="" />
       <h3>{hike.hike.park}</h3>
       <section>
@@ -15,7 +16,7 @@ function Card(hike) {
       </p>
       <p>{hike.hike.description}</p>
       <button>Complete This Hike</button>
-    </div>
+    </Grid>
   );
 }
 
