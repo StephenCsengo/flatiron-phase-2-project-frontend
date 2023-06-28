@@ -1,5 +1,6 @@
 import "./App.css";
 import Header from "./components/Header";
+import HikePage from "./components/HikePage";
 import Navbar from "./components/Navbar";
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <div className="App">
       <Header />
       <Navbar />
+      <HikePage />
     </div>
   );
 }

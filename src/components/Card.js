@@ -1,18 +1,19 @@
 import React from "react";
 
-function Card() {
+function Card(hike) {
+  console.log(hike.hike);
   return (
     <div>
-      <img src="https://placehold.co/300x200.png" />
-      <h3>Park Title</h3>
+      <img src="https://placehold.co/300x200.png" alt="" />
+      <h3>{hike.hike.park}</h3>
       <section>
-        <h4>Distance</h4>
-        <h4>Difficulty</h4>
+        <h4>{hike.hike.distance}</h4>
+        <h4>{hike.hike.difficulty}</h4>
       </section>
       <p>
-        <em>Trail Names</em>
+        <em>{hike.hike.trail}</em>
       </p>
-      <p>Description</p>
+      <p>{hike.hike.description}</p>
       <button>Complete This Hike</button>
     </div>
   );
