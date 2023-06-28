@@ -5,7 +5,7 @@ function Card(hike) {
   console.log(hike.hike);
   return (
     <Grid item md={4}>
-      <img src={hike.hike.image} alt="" style={{ width: "100%" }} />
+      <img src={hike.hike.image} alt="" />
       <h3>{hike.hike.park}</h3>
       <section>
         <h4>{hike.hike.distance}</h4>
