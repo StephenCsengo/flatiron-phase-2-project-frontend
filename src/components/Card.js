@@ -1,10 +1,11 @@
 import React from "react";
 import Grid from "@mui/material/Grid";
+import HikeDetails from "./HikeDetails";
 
 function Card(hike) {
   //console.log(hike.hike);
   function handleDetailClick() {
-    console.log(`I got clicked ${hike.hike.id}`);
+    HikeDetails(hike);
   }
   return (
     <Grid item md={4}>

@@ -1,17 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Grid from "@mui/material/Grid";
 
-function HikeDetails() {
-  //console.log(hike.hike);
-  const [hike, setHike] = useState({});
-
-  useEffect(() => {
-    fetch(`http://localhost:3000/hikes/4`)
-      .then((resp) => resp.json())
-      .then((data) => setHike(data));
-  }, []);
-
-  console.log(hike);
+function HikeDetails(hike) {
+  //console.log(hike);
 
   return (
     <Grid container spacing={3}>

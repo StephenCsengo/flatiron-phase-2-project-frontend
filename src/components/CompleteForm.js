@@ -1,7 +1,7 @@
 import React from "react";
 
 function CompleteForm() {
-  return;
+  return <p>This is the complete form</p>;
 }
 
 export default CompleteForm;
