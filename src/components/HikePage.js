@@ -15,7 +15,7 @@ function HikePage() {
   return (
     <Container>
       <HikeList hikes={hikes} />
-      <HikeDetails hike={hikes[1]} />
+      <HikeDetails />
     </Container>
   );
 }

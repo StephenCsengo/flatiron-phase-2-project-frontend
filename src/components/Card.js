@@ -2,7 +2,10 @@ import React from "react";
 import Grid from "@mui/material/Grid";
 
 function Card(hike) {
-  console.log(hike.hike);
+  //console.log(hike.hike);
+  function handleDetailClick() {
+    console.log(`I got clicked ${hike.hike.id}`);
+  }
   return (
     <Grid item md={4}>
       <img src={hike.hike.image} alt="" />
@@ -15,7 +18,7 @@ function Card(hike) {
         <em>{hike.hike.trail}</em>
       </p>
       <p>{hike.hike.description}</p>
-      <button>See Details</button>
+      <button onClick={handleDetailClick}>See Details</button>
       <button>Complete This Hike</button>
     </Grid>
   );
