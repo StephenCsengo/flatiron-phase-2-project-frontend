@@ -17,3 +17,6 @@ img {
   height: 15em;
   object-fit: cover;
 }
+.navbar {
+  margin: 2em;
+}
