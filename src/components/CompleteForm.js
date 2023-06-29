@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
 import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
 
@@ -7,6 +8,7 @@ function CompleteForm({ hikes }) {
   const [date, setDate] = useState("");
   const [hikeSelection, setHikeSelection] = useState(1);
   const [finishedHike, setFinishedHike] = useState(1);
+  const history = useHistory();
 
   useEffect(() => {
     if (hikes.length > 0) {
@@ -28,15 +30,12 @@ function CompleteForm({ hikes }) {
       },
       body: JSON.stringify(formData),
     });
+    history.push("/completed");
   }
 
   return (
     <Container>
       <Grid container spacing={2}>
-        <Grid item xs={6}>
-          <h3>{finishedHike.park}</h3>
-          <img src={finishedHike.image} alt="" />
-        </Grid>
         <Grid item xs={6}>
           <h1>Complete A Hike</h1>
           <form onSubmit={handleSubmit}>
@@ -70,6 +69,11 @@ function CompleteForm({ hikes }) {
             />
             <input type="submit" value="Complete Hike" />
           </form>
+        </Grid>
+
+        <Grid item xs={6}>
+          <h3>{finishedHike.park}</h3>
+          <img src={finishedHike.image} alt="" />
         </Grid>
       </Grid>
     </Container>
