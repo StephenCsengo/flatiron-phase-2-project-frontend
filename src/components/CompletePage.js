@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-import HikeList from "./HikeList";
+import Card from "./Card";
 import Container from "@mui/material/Container";
+import Grid from "@mui/material/Grid";
 
 function CompletePage() {
   const [hikes, setHikes] = useState([]);
@@ -13,7 +14,11 @@ function CompletePage() {
 
   return (
     <Container>
-      <HikeList hikes={hikes} />
+      <Grid container spacing={2}>
+        {hikes.map((hike) => (
+          <Card key={hike.park} hike={hike} />
+        ))}
+      </Grid>
     </Container>
   );
 }

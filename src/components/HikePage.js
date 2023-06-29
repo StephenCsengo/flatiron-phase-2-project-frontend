@@ -1,11 +1,16 @@
 import React from "react";
-import HikeList from "./HikeList";
+import Card from "./Card";
 import Container from "@mui/material/Container";
+import Grid from "@mui/material/Grid";
 
 function HikePage(hikes) {
   return (
     <Container>
-      <HikeList hikes={hikes} />
+      <Grid container spacing={2}>
+        {hikes.hikes.map((hike) => (
+          <Card key={hike.park} hike={hike} />
+        ))}
+      </Grid>
     </Container>
   );
 }
