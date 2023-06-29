@@ -1,17 +1,28 @@
 import React, { useState } from "react";
 
-function CompleteForm() {
+function CompleteForm({ hikes }) {
   const [distance, setDistance] = useState("");
   const [date, setDate] = useState("");
+  const [hikeSelection, setHikeSelection] = useState("");
 
   function handleSubmit(e) {
     e.preventDefault();
-    console.log(e.target.date.value);
+    console.log(e.target.hike.value);
   }
 
   return (
     <form onSubmit={handleSubmit}>
-      <select id="hike"></select>
+      <select
+        id="hike"
+        value={hikeSelection}
+        onChange={(e) => setHikeSelection(e.target.value)}
+      >
+        {hikes.map((hike) => (
+          <option key={hike.park} value={hike.id}>
+            {hike.park}
+          </option>
+        ))}
+      </select>
       <label htmlFor="distance">Miles Hiked</label>
       <input
         type="number"
