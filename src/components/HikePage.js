@@ -7,7 +7,7 @@ function HikePage(hikes) {
   return (
     <Container>
       <Grid container>
-        <h2>Suggested Hikes</h2>
+        <h2>Saved Hikes</h2>
       </Grid>
       <Grid container spacing={2}>
         {hikes.hikes.map((hike) => (
