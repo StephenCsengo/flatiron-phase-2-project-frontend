@@ -15,11 +15,19 @@ function CompletePage() {
   return (
     <Container>
       <Grid container spacing={2}>
-        {hikes.map((hike) => (
-          <Card key={hike.park} hike={hike} />
-        ))}
+        {hikes.length > 0 ? (
+          <p>There are hikes saved</p>
+        ) : (
+          <p>There are no hikes</p>
+        )}
       </Grid>
     </Container>
   );
 }
 export default CompletePage;
+
+/*
+{hikes.map((hike) => (
+          <Card key={hike.park} hike={hike} />
+        ))}
+*/
