@@ -4,7 +4,7 @@ import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
 
 function CompleteForm({ hikes }) {
-  const [distance, setDistance] = useState("");
+  const [distanceHiked, setDistanceHiked] = useState("");
   const [date, setDate] = useState("");
   const [hikeSelection, setHikeSelection] = useState(1);
   const [finishedHike, setFinishedHike] = useState(1);
@@ -20,7 +20,7 @@ function CompleteForm({ hikes }) {
     e.preventDefault();
     const formData = {
       finishedHike,
-      distance,
+      distanceHiked,
       date,
     };
     fetch("http://localhost:3000/completed", {
@@ -51,12 +51,12 @@ function CompleteForm({ hikes }) {
                 </option>
               ))}
             </select>
-            <label htmlFor="distance">Miles Hiked</label>
+            <label htmlFor="distanceHiked">Miles Hiked</label>
             <input
               type="number"
-              id="distance"
-              value={distance}
-              onChange={(e) => setDistance(e.target.value)}
+              id="distanceHiked"
+              value={distanceHiked}
+              onChange={(e) => setDistanceHiked(e.target.value)}
             />
             <label htmlFor="date">Date Hiked</label>
             <input
