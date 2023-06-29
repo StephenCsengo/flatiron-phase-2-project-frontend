@@ -1,56 +1,62 @@
-import React, { useState } from "react";
-import Container from "@mui/material/Container";
+import React, { useState, useEffect } from "react";
 import Grid from "@mui/material/Grid";
+import Container from "@mui/material/Container";
 
 function CompleteForm({ hikes }) {
   const [distance, setDistance] = useState("");
   const [date, setDate] = useState("");
   const [hikeSelection, setHikeSelection] = useState(1);
+  const [selectedHike, setSelectedHike] = useState(null);
+
+  useEffect(() => {
+    setSelectedHike(hikes.find((hike) => hike.id === hikeSelection));
+  }, [hikes, hikeSelection]);
 
   function handleSubmit(e) {
     e.preventDefault();
-    console.log(hikeSelection);
   }
-  let selectedHike = hikes.find((hike) => hike.id === hikeSelection);
-  console.log(selectedHike);
+
   return (
-    <Grid container>
-      <Grid item xs={6}>
-        <p>This is the other side</p>
+    <Container>
+      <Grid container spacing={2}>
+        <Grid item xs={6}>
+          <img src={selectedHike.image} alt="" />
+          <p>This is the other side</p>
+        </Grid>
+        <Grid item xs={6}>
+          <form onSubmit={handleSubmit}>
+            <select
+              id="hike"
+              value={hikeSelection}
+              onChange={(e) => setHikeSelection(Number(e.target.value))}
+            >
+              {hikes.map((hike) => (
+                <option key={hike.park} value={hike.id}>
+                  {hike.park}
+                </option>
+              ))}
+            </select>
+            <label htmlFor="distance">Miles Hiked</label>
+            <input
+              type="number"
+              id="distance"
+              value={distance}
+              onChange={(e) => setDistance(e.target.value)}
+            />
+            <label htmlFor="date">Date Hiked</label>
+            <input
+              type="date"
+              id="date"
+              min="2023-03-07"
+              max="2023-12-03"
+              value={date}
+              onChange={(e) => setDate(e.target.value)}
+            />
+            <input type="submit" value="Complete Hike" />
+          </form>
+        </Grid>
       </Grid>
-      <Grid item xs={6}>
-        <form onSubmit={handleSubmit}>
-          <select
-            id="hike"
-            value={hikeSelection}
-            onChange={(e) => setHikeSelection(e.target.value)}
-          >
-            {hikes.map((hike) => (
-              <option key={hike.park} value={hike.id}>
-                {hike.park}
-              </option>
-            ))}
-          </select>
-          <label htmlFor="distance">Miles Hiked</label>
-          <input
-            type="number"
-            id="distance"
-            value={distance}
-            onChange={(e) => setDistance(e.target.value)}
-          />
-          <label htmlFor="date">Date Hiked</label>
-          <input
-            type="date"
-            id="date"
-            min="2023-03-07"
-            max="2023-12-03"
-            value={date}
-            onChange={(e) => setDate(e.target.value)}
-          />
-          <input type="submit" value="Complete Hike" />
-        </form>
-      </Grid>
-    </Grid>
+    </Container>
   );
 }
 
