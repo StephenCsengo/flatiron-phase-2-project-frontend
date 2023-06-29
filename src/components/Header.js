@@ -1,12 +1,12 @@
 import React from "react";
 
 function Header() {
-    return (
-        <header>
-            <h1>Sky's The Limit Hike Tracker</h1>
-            <p>Enter explanation of Sky's The Limit Here</p>
-        </header>
-    )
+  return (
+    <header>
+      <h1>Stephen's Hike Tracker</h1>
+      <h4>Keep track of your hike locations and distances</h4>
+    </header>
+  );
 }
 
 export default Header;
