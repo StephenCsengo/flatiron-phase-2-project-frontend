@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Route, Switch } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header";
@@ -8,6 +8,14 @@ import CompletePage from "./components/CompletePage";
 import CompleteForm from "./components/CompleteForm";
 
 function App() {
+  const [hikes, setHikes] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:3000/hikes")
+      .then((resp) => resp.json())
+      .then((data) => setHikes(data));
+  }, []);
+
   return (
     <div className="App">
       <Header />
@@ -17,10 +25,10 @@ function App() {
           <CompletePage />
         </Route>
         <Route path="/completeform">
-          <CompleteForm />
+          <CompleteForm hikes={hikes} />
         </Route>
         <Route exact path="/">
-          <HikePage />
+          <HikePage hikes={hikes} />
         </Route>
       </Switch>
     </div>

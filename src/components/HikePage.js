@@ -1,16 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import HikeList from "./HikeList";
 import Container from "@mui/material/Container";
 
-function HikePage() {
-  const [hikes, setHikes] = useState([]);
-
-  useEffect(() => {
-    fetch("http://localhost:3000/hikes")
-      .then((resp) => resp.json())
-      .then((data) => setHikes(data));
-  }, []);
-
+function HikePage(hikes) {
   return (
     <Container>
       <HikeList hikes={hikes} />
