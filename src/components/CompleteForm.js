@@ -6,10 +6,12 @@ function CompleteForm({ hikes }) {
   const [distance, setDistance] = useState("");
   const [date, setDate] = useState("");
   const [hikeSelection, setHikeSelection] = useState(1);
-  const [selectedHike, setSelectedHike] = useState(null);
+  const [selectedHike, setSelectedHike] = useState(1);
 
   useEffect(() => {
-    setSelectedHike(hikes.find((hike) => hike.id === hikeSelection));
+    if (hikes.length > 0) {
+      setSelectedHike(hikes.find((hike) => hike.id === hikeSelection));
+    }
   }, [hikes, hikeSelection]);
 
   function handleSubmit(e) {
@@ -20,11 +22,13 @@ function CompleteForm({ hikes }) {
     <Container>
       <Grid container spacing={2}>
         <Grid item xs={6}>
+          <h3>{selectedHike.park}</h3>
           <img src={selectedHike.image} alt="" />
-          <p>This is the other side</p>
         </Grid>
         <Grid item xs={6}>
+          <h1>Complete A Hike</h1>
           <form onSubmit={handleSubmit}>
+            <label htmlFor="hike">Select A Hike</label>
             <select
               id="hike"
               value={hikeSelection}
