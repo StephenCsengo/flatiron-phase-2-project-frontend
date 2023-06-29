@@ -6,24 +6,36 @@ function CompleteForm({ hikes }) {
   const [distance, setDistance] = useState("");
   const [date, setDate] = useState("");
   const [hikeSelection, setHikeSelection] = useState(1);
-  const [selectedHike, setSelectedHike] = useState(1);
+  const [finishedHike, setFinishedHike] = useState(1);
 
   useEffect(() => {
     if (hikes.length > 0) {
-      setSelectedHike(hikes.find((hike) => hike.id === hikeSelection));
+      setFinishedHike(hikes.find((hike) => hike.id === hikeSelection));
     }
   }, [hikes, hikeSelection]);
 
   function handleSubmit(e) {
     e.preventDefault();
+    const formData = {
+      finishedHike,
+      distance,
+      date,
+    };
+    fetch("http://localhost:3000/completed", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
   }
 
   return (
     <Container>
       <Grid container spacing={2}>
         <Grid item xs={6}>
-          <h3>{selectedHike.park}</h3>
-          <img src={selectedHike.image} alt="" />
+          <h3>{finishedHike.park}</h3>
+          <img src={finishedHike.image} alt="" />
         </Grid>
         <Grid item xs={6}>
           <h1>Complete A Hike</h1>
