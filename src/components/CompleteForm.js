@@ -14,9 +14,11 @@ function CompleteForm({ hikes }) {
   let selectedHike = hikes.find((hike) => hike.id === hikeSelection);
   console.log(selectedHike);
   return (
-    <Container>
-      <Grid item md={6}></Grid>
-      <Grid item md={6}>
+    <Grid container>
+      <Grid item xs={6}>
+        <p>This is the other side</p>
+      </Grid>
+      <Grid item xs={6}>
         <form onSubmit={handleSubmit}>
           <select
             id="hike"
@@ -48,7 +50,7 @@ function CompleteForm({ hikes }) {
           <input type="submit" value="Complete Hike" />
         </form>
       </Grid>
-    </Container>
+    </Grid>
   );
 }
 
