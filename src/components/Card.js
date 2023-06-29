@@ -7,13 +7,14 @@ function Card(hike) {
       <img src={hike.hike.image} alt="" />
       <h3>{hike.hike.park}</h3>
       <section>
-        <h4>{hike.hike.distance}</h4>
-        <h4>{hike.hike.difficulty}</h4>
+        <p>
+          Suggested Distance: <strong>{hike.hike.suggestedmi} miles</strong>
+        </p>
+        <p>
+          Difficulty: <strong>{hike.hike.difficulty}</strong>
+        </p>
       </section>
-      <p>
-        <em>{hike.hike.trail}</em>
-      </p>
-      <p>{hike.hike.description}</p>
+      <p>Notes: {hike.hike.description}</p>
       <button>Complete This Hike</button>
     </Grid>
   );
