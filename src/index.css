@@ -17,6 +17,10 @@ img {
   height: 15em;
   object-fit: cover;
 }
+
+table img {
+  height: 6em;
+}
 .navbar {
   margin: 2em;
 }
