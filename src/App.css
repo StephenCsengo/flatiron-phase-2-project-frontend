@@ -6,6 +6,7 @@ header {
   text-align: center;
   color: white;
   background-image: url("../public/header-bg.jpg");
+  margin-top: -1.25em;
 }
 header h1 {
   padding-top: 3em;
@@ -29,14 +30,14 @@ form {
 button,
 .btn {
   color: #fff;
-  background-color: #00cc7a;
+  background-color: #01824c;
   padding: 10px 30px;
   border: none;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
     rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
     rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
   border-radius: 5px;
-  transition: 1000ms;
+  transition: 800ms;
   transform: translateY(0);
   display: flex;
   flex-direction: row;
@@ -46,10 +47,10 @@ button,
 
 button:hover,
 .btn:hover {
-  transition: 1000ms;
+  transition: 800ms;
   padding: 10px 40px;
   transform: translateY(-0px);
-  background-color: #01824c;
+  background-color: #00cc7a;
   color: #ffffff;
   border: none;
 }
@@ -61,10 +62,27 @@ button:hover,
 }
 
 .navbar a {
+  transition: 500ms;
   color: white;
+  text-decoration: none;
+  margin: 1em;
+  padding: 2em;
+}
+
+.navbar a:hover {
+  transition: 500ms;
+  background: #01824c;
 }
 
 .card button {
   position: relative;
   left: 25%;
+}
+
+.card section {
+  margin: 1em;
+}
+
+.info {
+  text-align: center;
 }

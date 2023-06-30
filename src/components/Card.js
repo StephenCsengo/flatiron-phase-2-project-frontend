@@ -8,16 +8,24 @@ function Card({ hike, onCompleteHike }) {
   return (
     <Grid className="card" item md={4}>
       <img src={hike.image} alt="" />
-      <h3>{hike.park}</h3>
       <section>
-        <p>
-          Planned Distance: <strong>{hike.suggestedmi} miles</strong>
-        </p>
-        <p>
-          Difficulty: <strong>{hike.difficulty}</strong>
-        </p>
+        <h3>{hike.park}</h3>
+        <Grid container>
+          <Grid className="info" item md={6}>
+            <p>Planned Distance</p>
+            <p>
+              <strong>{hike.suggestedmi} miles</strong>
+            </p>
+          </Grid>
+          <Grid className="info" item md={6}>
+            <p>Difficulty</p>
+            <p>
+              <strong>{hike.difficulty}</strong>
+            </p>
+          </Grid>
+        </Grid>
+        <p>Notes: {hike.description}</p>
       </section>
-      <p>Notes: {hike.description}</p>
       <button onClick={handleCompleteClick}>Complete This Hike</button>
     </Grid>
   );
