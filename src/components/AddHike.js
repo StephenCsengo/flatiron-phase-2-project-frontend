@@ -3,22 +3,25 @@ import { useHistory } from "react-router-dom";
 import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
 import TextField from "@mui/material/TextField";
-import Select from "@mui/material/Select";
-import Button from "@mui/material/Button";
+import InputAdornment from "@mui/material/InputAdornment";
 
 function AddHike() {
-  const [distanceHiked, setDistanceHiked] = useState("");
-  const [date, setDate] = useState("");
-  const [hikeSelection, setHikeSelection] = useState(1);
-  const [finishedHike, setFinishedHike] = useState(1);
+  const [park, setPark] = useState("");
+  const [suggestedmi, setSuggestedmi] = useState(null);
+  const [difficulty, setDifficulty] = useState("");
+  const [image, setImage] = useState("");
+  const [description, setDescription] = useState("");
   const history = useHistory();
 
   function handleSubmit(e) {
     e.preventDefault();
+    const numSuggestedmi = parseFloat(suggestedmi);
     const formData = {
-      finishedHike,
-      distanceHiked,
-      date,
+      park,
+      numSuggestedmi,
+      difficulty,
+      image,
+      description,
     };
     console.log(formData);
   }
@@ -26,30 +29,51 @@ function AddHike() {
   return (
     <Container>
       <Grid container spacing={2}>
-        <Grid item xs={6}>
+        <Grid item md={6}>
           <h1>Save A New Hike</h1>
           <form onSubmit={handleSubmit}>
-            <TextField id="park" label="Park Name" variant="outlined" />
             <TextField
+              onChange={(e) => setPark(e.target.value)}
+              id="park"
+              label="Park Name"
+              variant="outlined"
+            />
+            <TextField
+              onChange={(e) => setSuggestedmi(e.target.value)}
               id="suggestedmi"
               label="Suggested Distance"
               variant="outlined"
+              InputProps={{
+                endAdornment: (
+                  <InputAdornment position="end">miles</InputAdornment>
+                ),
+              }}
             />
-            <TextField id="difficulty" label="Difficulty" variant="outlined" />
-            <TextField id="image" label="Photo URL" variant="outlined" />
             <TextField
+              onChange={(e) => setDifficulty(e.target.value)}
+              id="difficulty"
+              label="Difficulty"
+              variant="outlined"
+            />
+            <TextField
+              onChange={(e) => setImage(e.target.value)}
+              id="image"
+              label="Photo URL"
+              variant="outlined"
+            />
+            <TextField
+              onChange={(e) => setDescription(e.target.value)}
               id="description"
               label="Notes"
               variant="outlined"
               multiline
             />
-            <Button variant="contained">Add Hike</Button>
+            <input type="submit" value="Add Hike" />
           </form>
         </Grid>
 
-        <Grid item xs={6}>
-          <h3>{finishedHike.park}</h3>
-          <img src={finishedHike.image} alt="" />
+        <Grid item md={6}>
+          <p>A pretty photo will go here</p>
         </Grid>
       </Grid>
     </Container>
