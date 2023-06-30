@@ -13,7 +13,7 @@ function App() {
 
   //Fetch initial list of hikes
   useEffect(() => {
-    fetch("http://localhost:3000/hikes")
+    fetch(`${process.env.REACT_APP_API_URL}/hikes`)
       .then((resp) => resp.json())
       .then((data) => setHikes(data));
   }, []);
