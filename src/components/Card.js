@@ -30,12 +30,16 @@ function Card({ hike, onCompleteHike, onRemoveHike }) {
         <p>Notes: {hike.description}</p>
       </section>
       <Grid container>
-        <button className="complete" onClick={handleCompleteClick}>
-          Complete Hike
-        </button>
-        <button className="remove" onClick={handleRemoveClick}>
-          Remove Hike
-        </button>
+        <Grid item xs={6}>
+          <button className="complete" onClick={handleCompleteClick}>
+            Complete Hike
+          </button>
+        </Grid>
+        <Grid item xs={6}>
+          <button className="remove" onClick={handleRemoveClick}>
+            Remove Hike
+          </button>
+        </Grid>
       </Grid>
     </Grid>
   );

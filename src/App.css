@@ -36,6 +36,7 @@ button,
 .btn {
   color: #fff;
   background-color: #01824c;
+  border: solid 1px #01824c;
   padding: 10px 30px;
   border: none;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
@@ -56,6 +57,7 @@ button:hover,
   padding: 10px 40px;
   transform: translateY(-0px);
   background-color: #00cc7a;
+  border: solid 1px #00cc7a;
   color: #ffffff;
   border: none;
 }
@@ -83,7 +85,6 @@ button:hover,
 }
 .card button {
   position: relative;
-  left: 25%;
 }
 
 .card section {
@@ -101,4 +102,14 @@ button:hover,
 .completed {
   justify-content: center;
   display: flex;
+}
+.remove {
+  background-color: #dbdbdb;
+  color: #162f32;
+  border: solid 1px #820101;
+}
+
+.remove:hover {
+  border: solid 1px #b70000;
+  background-color: #b70000;
 }
