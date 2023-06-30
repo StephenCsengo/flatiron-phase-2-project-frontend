@@ -1,14 +1,15 @@
 import React from "react";
-import Container from "@mui/material/Container";
-import Grid from "@mui/material/Grid";
-
-import Table from "@mui/material/Table";
-import TableBody from "@mui/material/TableBody";
-import TableCell from "@mui/material/TableCell";
-import TableContainer from "@mui/material/TableContainer";
-import TableHead from "@mui/material/TableHead";
-import TableRow from "@mui/material/TableRow";
-import Paper from "@mui/material/Paper";
+import {
+  Container,
+  Grid,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+  Paper,
+} from "@mui/material/";
 
 function CompletePage({ completedHikes }) {
   return (
@@ -21,7 +22,7 @@ function CompletePage({ completedHikes }) {
               <TableHead>
                 <TableRow>
                   <TableCell></TableCell>
-                  <TableCell>Completed Hike</TableCell>
+                  <TableCell>Park</TableCell>
                   <TableCell align="right">Distance Hiked</TableCell>
                   <TableCell align="right">Notes</TableCell>
                   <TableCell align="right">Remove</TableCell>
