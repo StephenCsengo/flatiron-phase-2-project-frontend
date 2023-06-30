@@ -63,6 +63,7 @@ button:hover,
 .navbar {
   padding: 2em 0;
   text-align: center;
+  justify-content: center;
   background-color: #162f32;
 }
 
@@ -78,9 +79,6 @@ button:hover,
   background: #01824c;
 }
 
-.active {
-  padding: 0;
-}
 .card {
   padding-bottom: 2em;
 }

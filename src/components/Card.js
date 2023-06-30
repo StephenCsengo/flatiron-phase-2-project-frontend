@@ -27,7 +27,7 @@ function Card({ hike, onCompleteHike, onRemoveHike }) {
             </p>
           </Grid>
         </Grid>
-        <p>Notes: {hike.description}</p>
+        <p>Notes</p> <p>{hike.description}</p>
       </section>
       <Grid container>
         <Grid item xs={6}>
