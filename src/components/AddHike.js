@@ -28,8 +28,7 @@ function AddHike({ onAddHike }) {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
     };
-
-    fetch("http://localhost:3000/hikes", configObj)
+    fetch(`${process.env.REACT_APP_API_URL}/hikes`, configObj)
       .then((res) => res.json())
       .then((data) => onAddHike(data));
     history.push("/");
