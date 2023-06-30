@@ -6,8 +6,10 @@ import Grid from "@mui/material/Grid";
 function HikePage({ hikes, onCompleteHike, onRemoveHike }) {
   return (
     <Container>
-      <Grid container>
-        <h2>Saved Hikes</h2>
+      <Grid container spacing={2}>
+        <Grid item>
+          <h2>Saved Hikes</h2>
+        </Grid>
       </Grid>
       <Grid container spacing={2}>
         {hikes.map((hike) => (

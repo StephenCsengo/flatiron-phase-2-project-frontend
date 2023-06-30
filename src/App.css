@@ -1,5 +1,5 @@
 body {
-  background: #dbdbdb;
+  background: #efefef;
   font-family: "Noto Sans", sans-serif;
 }
 header {
@@ -78,6 +78,9 @@ button:hover,
   background: #01824c;
 }
 
+.active {
+  padding: 0;
+}
 .card {
   padding-bottom: 2em;
 }
@@ -100,10 +103,10 @@ button:hover,
 
 .completed {
   justify-content: center;
-  display: flex;
+  display: grid !important;
 }
 .remove {
-  background-color: #dbdbdb;
+  background-color: #efefef;
   color: #162f32;
   border: solid 1px #820101;
 }
