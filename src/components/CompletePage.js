@@ -25,7 +25,6 @@ function CompletePage({ completedHikes }) {
                   <TableCell>Park</TableCell>
                   <TableCell align="right">Distance Hiked</TableCell>
                   <TableCell align="right">Notes</TableCell>
-                  <TableCell align="right">Remove</TableCell>
                 </TableRow>
               </TableHead>
               <TableBody>
@@ -42,9 +41,6 @@ function CompletePage({ completedHikes }) {
                       {hike.suggestedmi} Miles
                     </TableCell>
                     <TableCell align="right">{hike.description}</TableCell>
-                    <TableCell align="right">
-                      <button>Remove</button>
-                    </TableCell>
                   </TableRow>
                 ))}
               </TableBody>
