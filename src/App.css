@@ -1,15 +1,21 @@
 body {
   background: #dbdbdb;
+  font-family: "Noto Sans", sans-serif;
 }
 header {
   height: 19em;
   text-align: center;
   color: white;
   background-image: url("../public/header-bg.jpg");
-  margin-top: -1.25em;
 }
 header h1 {
-  padding-top: 3em;
+  padding-top: 1.5em;
+  margin: 0;
+  font-size: 3em;
+  font-family: "Bungee Shade", cursive;
+}
+h2 {
+  text-align: center;
 }
 
 img {
