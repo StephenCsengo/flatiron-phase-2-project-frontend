@@ -22,6 +22,7 @@ function App() {
   }
 
   function completeHike(completedHike) {
+    setHikes(hikes.filter((hike) => hike.id !== completedHike.id));
     setCompletedHikes([...completedHikes, completedHike]);
     console.log(completedHikes);
   }

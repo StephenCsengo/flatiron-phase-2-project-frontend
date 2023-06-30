@@ -14,6 +14,7 @@ function CompletePage({ completedHikes }) {
   return (
     <Container>
       <Grid container spacing={2}>
+        <h2>Your Completed Hikes</h2>
         {completedHikes.length > 0 ? (
           <TableContainer component={Paper}>
             <Table aria-label="simple table">
@@ -49,7 +50,9 @@ function CompletePage({ completedHikes }) {
             </Table>
           </TableContainer>
         ) : (
-          <p>There are no hikes</p>
+          <Grid container>
+            <p>Oops! There are no completed hikes yet!</p>
+          </Grid>
         )}
       </Grid>
     </Container>

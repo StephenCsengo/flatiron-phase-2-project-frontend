@@ -4,7 +4,6 @@ import Grid from "@mui/material/Grid";
 function Card({ hike, onCompleteHike }) {
   function handleCompleteClick() {
     onCompleteHike(hike);
-    console.log(hike);
   }
   return (
     <Grid item md={4}>
