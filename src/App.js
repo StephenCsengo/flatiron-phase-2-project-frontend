@@ -6,6 +6,7 @@ import HikePage from "./components/HikePage";
 import Navbar from "./components/Navbar";
 import CompletePage from "./components/CompletePage";
 import CompleteForm from "./components/CompleteForm";
+import AddHike from "./components/AddHike";
 
 function App() {
   const [hikes, setHikes] = useState([]);
@@ -29,6 +30,7 @@ function App() {
         </Route>
         <Route exact path="/">
           <HikePage hikes={hikes} />
+          <AddHike />
         </Route>
       </Switch>
     </div>
