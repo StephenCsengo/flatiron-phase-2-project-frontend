@@ -7,6 +7,7 @@ header {
   text-align: center;
   color: white;
   background-image: url("../public/header-bg.jpg");
+  background-color: #162f32;
 }
 header h1 {
   padding-top: 1.5em;
