@@ -8,7 +8,7 @@ function Navbar() {
         Home
       </NavLink>
       <NavLink to="/completed">Your Completed Hikes</NavLink>
-      <NavLink to="/completeform">Complete A Hike</NavLink>
+      <NavLink to="/addhike">Save A New Hike</NavLink>
     </div>
   );
 }
