@@ -5,11 +5,11 @@ import Header from "./components/Header";
 import HikePage from "./components/HikePage";
 import Navbar from "./components/Navbar";
 import CompletePage from "./components/CompletePage";
-import CompleteForm from "./components/CompleteForm";
 import AddHike from "./components/AddHike";
 
 function App() {
   const [hikes, setHikes] = useState([]);
+  const [completedHikes, setCompletedHikes] = useState([]);
 
   useEffect(() => {
     fetch("http://localhost:3000/hikes")
@@ -21,22 +21,27 @@ function App() {
     setHikes([...hikes, newHike]);
   }
 
+  function completeHike(completedHike) {
+    setCompletedHikes([...completedHikes, completedHike]);
+    console.log(completedHikes);
+  }
   return (
     <div className="App">
       <Header />
       <Navbar />
       <Switch>
         <Route path="/completed">
-          <CompletePage />
-        </Route>
-        <Route path="/completeform">
-          <CompleteForm />
+          <CompletePage completedHikes={completedHikes} />
         </Route>
         <Route path="/addhike">
           <AddHike onAddHike={addHike} />
         </Route>
         <Route exact path="/">
-          <HikePage hikes={hikes} />
+          <HikePage
+            hikes={hikes}
+            completedHikes={completedHikes}
+            onCompleteHike={completeHike}
+          />
         </Route>
       </Switch>
     </div>

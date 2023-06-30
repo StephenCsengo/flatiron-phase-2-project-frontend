@@ -3,15 +3,15 @@ import Card from "./Card";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 
-function HikePage(hikes) {
+function HikePage({ hikes, onCompleteHike }) {
   return (
     <Container>
       <Grid container>
         <h2>Saved Hikes</h2>
       </Grid>
       <Grid container spacing={2}>
-        {hikes.hikes.map((hike) => (
-          <Card key={hike.park} hike={hike} />
+        {hikes.map((hike) => (
+          <Card onCompleteHike={onCompleteHike} key={hike.park} hike={hike} />
         ))}
       </Grid>
     </Container>
