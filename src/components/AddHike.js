@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
@@ -32,7 +32,7 @@ function AddHike({ onAddHike }) {
     fetch("http://localhost:3000/hikes", configObj)
       .then((res) => res.json())
       .then((data) => onAddHike(data));
-    console.log(formData);
+    history.push("/");
   }
 
   return (

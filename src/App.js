@@ -32,10 +32,11 @@ function App() {
         <Route path="/completeform">
           <CompleteForm />
         </Route>
-        <Route path="/addhike"></Route>
+        <Route path="/addhike">
+          <AddHike onAddHike={addHike} />
+        </Route>
         <Route exact path="/">
           <HikePage hikes={hikes} />
-          <AddHike onAddHike={addHike} />
         </Route>
       </Switch>
     </div>
