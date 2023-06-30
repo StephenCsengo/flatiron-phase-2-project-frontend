@@ -6,7 +6,7 @@ function Card({ hike, onCompleteHike }) {
     onCompleteHike(hike);
   }
   return (
-    <Grid item md={4}>
+    <Grid className="card" item md={4}>
       <img src={hike.image} alt="" />
       <h3>{hike.park}</h3>
       <section>

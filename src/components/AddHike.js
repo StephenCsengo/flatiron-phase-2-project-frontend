@@ -76,7 +76,7 @@ function AddHike({ onAddHike }) {
               variant="outlined"
               multiline
             />
-            <input type="submit" value="Add Hike" />
+            <input className="btn" type="submit" value="Add Hike" />
           </form>
         </Grid>
 

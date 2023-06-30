@@ -1,3 +1,6 @@
+body {
+  background: #dbdbdb;
+}
 header {
   height: 19em;
   text-align: center;
@@ -17,6 +20,40 @@ img {
 table img {
   height: 6em;
 }
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+button,
+.btn {
+  color: #fff;
+  background-color: #00cc7a;
+  padding: 10px 30px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+    rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+    rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+  border-radius: 5px;
+  transition: 1000ms;
+  transform: translateY(0);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+}
+
+button:hover,
+.btn:hover {
+  transition: 1000ms;
+  padding: 10px 40px;
+  transform: translateY(-0px);
+  background-color: #01824c;
+  color: #ffffff;
+  border: none;
+}
+
 .navbar {
   padding: 2em 0;
   text-align: center;
@@ -25,4 +62,9 @@ table img {
 
 .navbar a {
   color: white;
+}
+
+.card button {
+  position: relative;
+  left: 25%;
 }
