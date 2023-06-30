@@ -96,3 +96,7 @@ button:hover,
 .info {
   text-align: center;
 }
+
+.input {
+  padding-bottom: 1em !important;
+}

@@ -41,16 +41,18 @@ function AddHike({ onAddHike }) {
           <h1>Save A New Hike</h1>
           <form onSubmit={handleSubmit}>
             <TextField
+              className="input"
               onChange={(e) => setPark(e.target.value)}
               id="park"
               label="Park Name"
-              variant="outlined"
+              variant="filled"
             />
             <TextField
+              className="input"
               onChange={(e) => setSuggestedmi(e.target.value)}
               id="suggestedmi"
               label="Suggested Distance"
-              variant="outlined"
+              variant="filled"
               InputProps={{
                 endAdornment: (
                   <InputAdornment position="end">miles</InputAdornment>
@@ -58,22 +60,25 @@ function AddHike({ onAddHike }) {
               }}
             />
             <TextField
+              className="input"
               onChange={(e) => setDifficulty(e.target.value)}
               id="difficulty"
               label="Difficulty"
-              variant="outlined"
+              variant="filled"
             />
             <TextField
+              className="input"
               onChange={(e) => setImage(e.target.value)}
               id="image"
               label="Photo URL"
-              variant="outlined"
+              variant="filled"
             />
             <TextField
+              className="input"
               onChange={(e) => setDescription(e.target.value)}
               id="description"
               label="Notes"
-              variant="outlined"
+              variant="filled"
               multiline
             />
             <input className="btn" type="submit" value="Add Hike" />
