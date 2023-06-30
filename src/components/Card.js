@@ -1,9 +1,12 @@
 import React from "react";
 import Grid from "@mui/material/Grid";
 
-function Card({ hike, onCompleteHike }) {
+function Card({ hike, onCompleteHike, onRemoveHike }) {
   function handleCompleteClick() {
     onCompleteHike(hike);
+  }
+  function handleRemoveClick() {
+    onRemoveHike(hike);
   }
   return (
     <Grid className="card" item md={4}>
@@ -26,7 +29,14 @@ function Card({ hike, onCompleteHike }) {
         </Grid>
         <p>Notes: {hike.description}</p>
       </section>
-      <button onClick={handleCompleteClick}>Complete This Hike</button>
+      <Grid container>
+        <button className="complete" onClick={handleCompleteClick}>
+          Complete Hike
+        </button>
+        <button className="remove" onClick={handleRemoveClick}>
+          Remove Hike
+        </button>
+      </Grid>
     </Grid>
   );
 }

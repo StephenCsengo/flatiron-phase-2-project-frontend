@@ -28,6 +28,11 @@ function App() {
     setCompletedHikes([...completedHikes, completedHike]);
   }
 
+  //Remove hike from homescreen
+  function removeHike(RemovedHike) {
+    setHikes(hikes.filter((hike) => hike.id !== RemovedHike.id));
+  }
+
   return (
     <div className="App">
       <Header />
@@ -40,7 +45,11 @@ function App() {
           <AddHike onAddHike={addHike} />
         </Route>
         <Route exact path="/">
-          <HikePage hikes={hikes} onCompleteHike={completeHike} />
+          <HikePage
+            hikes={hikes}
+            onCompleteHike={completeHike}
+            onRemoveHike={removeHike}
+          />
         </Route>
       </Switch>
     </div>
