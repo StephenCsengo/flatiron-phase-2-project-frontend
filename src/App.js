@@ -11,6 +11,7 @@ function App() {
   const [hikes, setHikes] = useState([]);
   const [completedHikes, setCompletedHikes] = useState([]);
 
+  //Fetch initial list of hikes
   useEffect(() => {
     fetch("http://localhost:3000/hikes")
       .then((resp) => resp.json())
@@ -21,11 +22,12 @@ function App() {
     setHikes([...hikes, newHike]);
   }
 
+  //Remove hike from initial hike state and add it to completed state
   function completeHike(completedHike) {
     setHikes(hikes.filter((hike) => hike.id !== completedHike.id));
     setCompletedHikes([...completedHikes, completedHike]);
-    console.log(completedHikes);
   }
+
   return (
     <div className="App">
       <Header />
@@ -38,11 +40,7 @@ function App() {
           <AddHike onAddHike={addHike} />
         </Route>
         <Route exact path="/">
-          <HikePage
-            hikes={hikes}
-            completedHikes={completedHikes}
-            onCompleteHike={completeHike}
-          />
+          <HikePage hikes={hikes} onCompleteHike={completeHike} />
         </Route>
       </Switch>
     </div>
