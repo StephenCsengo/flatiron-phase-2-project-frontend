@@ -17,6 +17,10 @@ function App() {
       .then((data) => setHikes(data));
   }, []);
 
+  function addHike(newHike) {
+    setHikes([...hikes, newHike]);
+  }
+
   return (
     <div className="App">
       <Header />
@@ -26,11 +30,12 @@ function App() {
           <CompletePage />
         </Route>
         <Route path="/completeform">
-          <CompleteForm hikes={hikes} />
+          <CompleteForm />
         </Route>
+        <Route path="/addhike"></Route>
         <Route exact path="/">
           <HikePage hikes={hikes} />
-          <AddHike />
+          <AddHike onAddHike={addHike} />
         </Route>
       </Switch>
     </div>

@@ -5,7 +5,7 @@ import Container from "@mui/material/Container";
 import TextField from "@mui/material/TextField";
 import InputAdornment from "@mui/material/InputAdornment";
 
-function AddHike() {
+function AddHike({ onAddHike }) {
   const [park, setPark] = useState("");
   const [suggestedmi, setSuggestedmi] = useState(null);
   const [difficulty, setDifficulty] = useState("");
@@ -23,6 +23,15 @@ function AddHike() {
       image,
       description,
     };
+    const configObj = {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    };
+
+    fetch("http://localhost:3000/hikes", configObj)
+      .then((res) => res.json())
+      .then((data) => onAddHike(data));
     console.log(formData);
   }
 
