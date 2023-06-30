@@ -38,7 +38,7 @@ function AddHike({ onAddHike }) {
     <Container>
       <Grid container spacing={2}>
         <Grid item md={6}>
-          <h1>Save A New Hike</h1>
+          <h2>Save A New Hike</h2>
           <form onSubmit={handleSubmit}>
             <TextField
               className="input"

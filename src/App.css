@@ -15,9 +15,6 @@ header h1 {
   font-size: 3em;
   font-family: "Bungee Shade", cursive;
 }
-h2 {
-  text-align: center;
-}
 
 img {
   min-width: 21em;
@@ -99,4 +96,9 @@ button:hover,
 
 .input {
   padding-bottom: 1em !important;
+}
+
+.completed {
+  justify-content: center;
+  display: flex;
 }
