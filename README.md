@@ -1,6 +1,6 @@
-# TrekLog React Web App
+# TrailBlazer React Web App
 
-TrekLog is a web application used to keep track of hiking locations. Add a photo, planned distance, difficulty, and notes along with the location. Mark a hike as completed after you've gone on it.
+TrailBlazer is a web application used to keep track of hiking locations. Add a photo, planned distance, difficulty, and notes along with the location. Mark a hike as completed after you've gone on it.
 
 ## How To Install
 
@@ -24,9 +24,14 @@ TrekLog is a web application used to keep track of hiking locations. Add a photo
 ## Usage
 
 A video walkthrough of using the app can be found below.
+
 <a href="https://www.youtube.com/watch?v=A1O4uXizSeM
 " target="_blank"><img src="https://img.youtube.com/vi/A1O4uXizSeM/0.jpg" 
 alt="TrailBlazer Walkthrough Video" width="240" height="180" border="10" /></a>
+
+## Contributions
+
+Contributions are welcome! Please fork the repository and create a new branch for your features or bug fixes. Submit a pull request describing your changes.
 
 ## License
 
