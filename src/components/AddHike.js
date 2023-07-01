@@ -7,7 +7,7 @@ import InputAdornment from "@mui/material/InputAdornment";
 
 function AddHike({ onAddHike }) {
   const [park, setPark] = useState("");
-  const [suggestedmi, setSuggestedmi] = useState(null);
+  const [numSuggestedmi, setNumSuggestedmi] = useState(null);
   const [difficulty, setDifficulty] = useState("");
   const [image, setImage] = useState("");
   const [description, setDescription] = useState("");
@@ -15,10 +15,10 @@ function AddHike({ onAddHike }) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    const numSuggestedmi = parseFloat(suggestedmi);
+    const suggestedmi = parseFloat(numSuggestedmi);
     const formData = {
       park,
-      numSuggestedmi,
+      suggestedmi,
       difficulty,
       image,
       description,
@@ -49,8 +49,8 @@ function AddHike({ onAddHike }) {
             />
             <TextField
               className="input"
-              onChange={(e) => setSuggestedmi(e.target.value)}
-              id="suggestedmi"
+              onChange={(e) => setNumSuggestedmi(e.target.value)}
+              id="numsuggestedmi"
               label="Planned Distance"
               variant="filled"
               InputProps={{
