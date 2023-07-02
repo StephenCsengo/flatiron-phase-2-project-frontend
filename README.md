@@ -1,3 +1,16 @@
+# TrekLog
+
+TrekLog is a web application used to keep track of hiking locations. Add a photo, planned distance, difficulty, and notes along with the location. Mark a hike as completed after you've gone on it.
+
+## How To Install
+
+1. Fork and clone this repository
+2. Navigate to the local directory with
+   `cd flatiron-phase-2-project-frontend`
+3. Install the dependencies with
+   `npm install`
+4.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
