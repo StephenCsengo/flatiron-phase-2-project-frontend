@@ -86,7 +86,11 @@ function AddHike({ onAddHike }) {
         </Grid>
 
         <Grid item md={6}>
-          <p>A pretty photo will go here</p>
+          <img
+            className="add-img"
+            src="/add-pg-photo.jpg"
+            alt="Bash Bish Falls"
+          />
         </Grid>
       </Grid>
     </Container>

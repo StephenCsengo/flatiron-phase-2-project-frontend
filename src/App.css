@@ -1,6 +1,7 @@
 body {
   background: #efefef;
   font-family: "Noto Sans", sans-serif;
+  overflow-y: scroll;
 }
 header {
   height: 19em;
@@ -14,13 +15,6 @@ header h1 {
   margin: 0;
   font-size: 3em;
   font-family: "Bungee Shade", cursive;
-}
-
-img {
-  min-width: 21em;
-  width: 100%;
-  height: 15em;
-  object-fit: cover;
 }
 
 table img {
@@ -82,6 +76,14 @@ button:hover,
 .card {
   padding-bottom: 2em;
 }
+
+.card img {
+  min-width: 21em;
+  width: 100%;
+  height: 15em;
+  object-fit: cover;
+}
+
 .card button {
   position: relative;
 }
@@ -112,4 +114,8 @@ button:hover,
 .remove:hover {
   border: solid 1px #b70000;
   background-color: #b70000;
+}
+
+.add-img {
+  margin-top: 1.75em;
 }

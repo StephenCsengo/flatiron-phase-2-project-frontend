@@ -4,21 +4,19 @@ import Grid from "@mui/material/Grid";
 
 function Navbar() {
   return (
-    <div>
-      <Grid className="navbar" container>
-        <Grid item>
-          <NavLink to="/" exact>
-            Home
-          </NavLink>
-        </Grid>
-        <Grid item>
-          <NavLink to="/completed">Your Completed Hikes</NavLink>
-        </Grid>
-        <Grid item>
-          <NavLink to="/addhike">Save A New Hike</NavLink>
-        </Grid>
+    <Grid className="navbar" container>
+      <Grid item>
+        <NavLink to="/" exact>
+          Home
+        </NavLink>
       </Grid>
-    </div>
+      <Grid item>
+        <NavLink to="/completed">Your Completed Hikes</NavLink>
+      </Grid>
+      <Grid item>
+        <NavLink to="/addhike">Save A New Hike</NavLink>
+      </Grid>
+    </Grid>
   );
 }
 
