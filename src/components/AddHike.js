@@ -51,7 +51,7 @@ function AddHike({ onAddHike }) {
               className="input"
               onChange={(e) => setSuggestedmi(e.target.value)}
               id="suggestedmi"
-              label="Suggested Distance"
+              label="Planned Distance"
               variant="filled"
               InputProps={{
                 endAdornment: (
