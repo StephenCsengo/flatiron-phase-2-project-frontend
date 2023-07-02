@@ -1,6 +1,6 @@
 body {
   background: #efefef;
-  font-family: "Noto Sans", sans-serif;
+  font-family: "Noto Sans", Arial, Helvetica, sans-serif;
   overflow-y: scroll;
 }
 header {
@@ -14,7 +14,7 @@ header h1 {
   padding-top: 1.5em;
   margin: 0;
   font-size: 3em;
-  font-family: "Bungee Shade", cursive;
+  font-family: "Bungee Shade", Arial, Helvetica, sans-serif;
 }
 
 table img {
